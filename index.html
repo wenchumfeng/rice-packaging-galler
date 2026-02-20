@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>大米包装展示</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lightbox.css">
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <h1>大米包装展示</h1>
+  </div>
+</header>
+
+<!-- 轮播图组件 -->
+<section class="carousel-section">
+  <h2>热销产品</h2>
+  <div class="carousel-container">
+    <div class="carousel" id="carousel">
+      <!-- 轮播图片将通过 JavaScript 动态生成 -->
+    </div>
+    <button class="carousel-btn prev" onclick="moveCarousel(-1)">&lt;</button>
+    <button class="carousel-btn next" onclick="moveCarousel(1)">&gt;</button>
+  </div>
+  <div class="carousel-indicators" id="carousel-indicators">
+    <!-- 指示器将通过 JavaScript 动态生成 -->
+  </div>
+</section>
+
+<!-- 筛选功能 -->
+<div class="filters">
+  <div class="filter-groups-container">
+    <div class="filter-group">
+      <div class="filter-label">系列：</div>
+      <div class="filter-buttons" id="series-buttons">
+        <!-- 系列按钮将通过 JavaScript 动态生成 -->
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-label">规格：</div>
+      <div class="filter-buttons" id="spec-buttons">
+        <!-- 规格按钮将通过 JavaScript 动态生成 -->
+      </div>
+    </div>
+  </div>
+
+  <button class="view-button" onclick="loadImages()">查看</button>
+</div>
+
+<main id="gallery"></main>
+
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <div id="caption"></div>
+</div>
+
+<script src="lightbox.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
