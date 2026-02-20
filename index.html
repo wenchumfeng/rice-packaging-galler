@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>大米包装展示</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lightbox.css">
+</head>
+<body>
+
+<header>
+  <h1>大米包装展示</h1>
+  <div class="filters">
+    <select id="series" onchange="updateSpecOptions()">
+      <option value="bianzhidai">编织袋</option>
+      <option value="suliaodai">塑料袋</option>
+    </select>
+
+    <select id="spec">
+      <!-- 选项将通过 JavaScript 动态生成 -->
+    </select>
+
+    <button onclick="loadImages()">查看</button>
+  </div>
+</header>
+
+<main id="gallery"></main>
+
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <div id="caption"></div>
+</div>
+
+<script src="lightbox.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
